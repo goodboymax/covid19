@@ -32,7 +32,7 @@ from dateutil.parser import parse
 #from tinydb import TinyDB, Query
 
 dir_path = "csse_covid_19_data/csse_covid_19_daily_reports"
-dic_path = "./covid_19_daily_reports_dic.pickle"
+dic_path = "csse_covid_19_data/covid_19_daily_reports_dic.pickle"
 
 files = []
 
@@ -133,6 +133,7 @@ def main():
     dic = {date_key : {Country_key : value1, Confirmed_key : value2, Death_key : value3, Recovered_key : value4}
         for date_key,value1,value2,value3,value4
         in zip(date, countory,confirmed ,death,recovere)}
+
     print(dic)
 
     #################################################################
